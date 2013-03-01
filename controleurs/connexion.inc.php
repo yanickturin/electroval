@@ -1,0 +1,21 @@
+<?php
+$message_connexion='';
+$is_connecte=0;
+$table_membre='users';
+include_once('modeles/connexion.php');
+if(check_connexion()){
+	if(isAdmin()){
+		header('Location:'.ADRESSE_SITE.'/admin.html');
+	}
+	else{
+		$message_connexion .= '<p class="erreur">Vous n\'êtes malheureusement pas admin, vous ne pouvez en conséquent pas accèder à la page admin.</p>';
+		session_destroy();
+		ob_end_flush();
+		include_once('vues/connexion.php');
+	}
+}
+else{
+	ob_end_flush();
+	include_once('vues/connexion.php');
+}
+?>

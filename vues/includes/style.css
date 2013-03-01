@@ -1,0 +1,534 @@
+/* ========================================================================================																								 
+	Nom:			style.css									
+	Description:		Feuille de Style du site Electroval		
+	Création:		14.05.2008								 		
+	Auteur:		Conception-Web | Turin Yanick				    																		
+=========================================================================================*/
+* {
+margin:0;
+}
+/*------------------------------------------------------------------------------ 
+ Style pour le bb_code
+ ----------------------------------------------------------------------------- */
+.bold {
+font-weight:bold;
+}
+
+.souligne {
+text-decoration:underline;
+}
+
+.italique {
+font-style:italic;
+}
+
+.centre {
+text-align:center;
+}
+
+.droite {
+text-align:right;
+}
+
+.gauche {
+text-align:left;
+}
+/*------------------------------------------------------------------------------ 
+Style header + haut
+ ----------------------------------------------------------------------------- */
+#haut {
+background-image:url("../images/motif_header_repetition.png");
+background-repeat:repeat-x;
+height:260px;
+}
+
+#header_image {
+background-image:url("../images/header.png");
+background-repeat:no-repeat;
+background-position:top left;
+height:260px;
+}
+
+#haut p {
+font-family:Verdana, Arial, serif;
+font-size:15px;
+color:#FFFFFF;
+float:right;
+vertical-align:top;
+margin-top:10px;
+margin-right:10px;
+font-weight:bold;
+}
+
+#haut p a {
+color:#FFFFFF;
+}
+
+#haut p a:hover {
+color:yellow;
+text-decoration:underline;
+}
+/*------------------------------------------------------------------------------ 
+Style menu
+ ----------------------------------------------------------------------------- */
+#header_menu {
+position:absolute;
+top:208px;
+left:0;
+height:65px;
+width:980px;
+padding:0;
+}
+
+#onglet {
+list-style:none;
+overflow:hidden;
+margin:0;
+padding:0;
+}
+
+#onglet li {
+float:left;
+width:140px;
+text-align:center;
+}
+
+#onglet li a {
+display:block;
+background:url("../images/onglet_total.png") no-repeat top left;
+color:#000000;
+text-align:center;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+font-family:Arial, Verdana, Helvetica, sans-serif;
+height:20px;
+padding:4px 0;
+}
+
+#onglet li a:hover {
+background:url("../images/onglet_total.png") no-repeat top right;
+width:140px;
+}
+
+#onglet li a.active {
+background:url("../images/onglet_total.png") no-repeat top right;
+width:140px;
+}
+/*------------------------------------------------------------------------------ 
+Style page (page, content et menu_gauche)
+ ----------------------------------------------------------------------------- */
+#page {
+font-family:Verdana, Arial, serif;
+font-size:11px;
+background-image:url("../images/motif_menu_gauche.jpg");
+background-repeat:repeat-y;
+}
+
+#menu_gauche {
+float:left;
+margin:0;
+width:200px;
+text-align:center;
+border-right:2px solid black;
+}
+
+#menu_gauche a {
+color:#000000;
+font-size:12px;
+text-decoration:none;
+}
+
+#menu_gauche a:hover {
+text-decoration:underline;
+}
+
+#liens_menu_gauche{
+list-style:none;
+overflow:hidden;
+margin:0;
+padding:0;
+border-bottom:1px solid black;
+}
+
+#liens_menu_gauche li{
+padding-top:10px;
+padding-bottom:10px;
+border-top:1px solid black;
+background-color:#F8EA56;
+}
+
+#liens_menu_gauche li:hover{
+background-color:#C3C3C4;
+text-decoration:underline;
+}
+
+#liens_menu_gauche .lien_menu_gauche_actif{
+background-color:#C3C3C4;
+}
+
+#content {
+background-color:#FFFFFF;
+margin-left:200px;
+border-left:2px solid black;
+padding:20px;
+z-index:300;
+}
+
+#content h1 {
+font-size:23px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#content .sous_titre {
+  padding: 2px 10px 2px 5px; /* Dans l'ordre: padding-top padding-right padding-bottom padding-left */
+  border-left: 5px solid #666666;
+  border-bottom: 2px dotted #666666;
+  color: #3F4C6B;
+  font-size:13px;
+  font-weight:bold;
+}
+
+#content p {
+font-size:13px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+/*------------------------------------------------------------------------------ 
+Style footer
+ ----------------------------------------------------------------------------- */
+#footer {
+position:relative;
+bottom:0;
+left:0;
+clear:both;
+text-align:center;
+border-bottom:1px solid black;
+border-top:2px solid black;
+margin:0;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#footer p {
+font-size:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#footer p a {
+font-size:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+
+#footer p a:hover {
+text-decoration:underline;
+}
+/*------------------------------------------------------------------------------ 
+ Style pour les infos-bulles
+ ----------------------------------------------------------------------------- */
+.info {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+position:relative;
+text-decoration:none;
+}
+
+.info img:hover{
+background-color:#C0C0C0;
+}
+.info span {
+display:none;
+}
+
+.info:hover {
+background:none;
+z-index:500;
+text-decoration:none;
+}
+
+.info:hover span {
+display:inline;
+position:absolute;
+white-space:nowrap;
+top:30px;
+left:20px;
+background:#000000;
+color:#FFFFFF;
+padding:8px;
+}
+
+.info:hover span .titre_info {
+text-decoration:underline;
+}
+
+/*------------------------------------------------------------------------------ 
+Style pour les paragraphes spéciaux
+ ----------------------------------------------------------------------------- */
+.erreur {
+background:#FFEBEF url("../images/icones/erreur.png") center no-repeat;
+background-position:15px 50%;
+text-align:left;
+border-top:2px solid #DE3C10;
+border-bottom:2px solid #DE3C10;
+padding:5px 20px 5px 45px;
+}
+
+.accept {
+background:#CEE6C3 url("../images/icones/accept.png") center no-repeat;
+background-position:15px 50%;
+text-align:left;
+border-top:2px solid #359545;
+border-bottom:2px solid #359545;
+padding:5px 20px 5px 45px;
+}
+
+/*------------------------------------------------------------------------------ 
+ Style pour les "pop-ups"
+ ----------------------------------------------------------------------------- */
+#ajout_dossier,#ajout_image,#modif_image,#affiche_images,#edit_annee ,#affiche_prev, #add_categorie,#ajout_zip,#affiche_dossiers{
+display:none;
+position:absolute;
+z-index:1000;
+left:30%;
+top:40%;
+width:415px;
+background-color:#000000;
+padding:2px;
+}
+#affiche_prev{
+width:750px;
+}
+#ajout_dossier form,#ajout_image form,#modif_image form,#edit_annee form,#add_categorie form,#ajout_zip form,#affiche_dossiers form {
+background-color:#FFFFFF;
+padding:15px;
+}
+
+.racine_arbo ,#prev{
+background-color:#FFFFFF;
+padding:15px;
+}
+
+.arbo,.arbo_dossier {
+padding-left:20px;
+}
+
+.arbo_cache {
+display:none;
+}
+
+.pop_up_barre {
+background-color:#D4EEF7;
+height:1.3em;
+border-bottom:2px solid #000000;
+border-top:1px solid #E6F5F9;
+border-left:1px solid #E6F5F9;
+border-right:1px solid #2088AC;
+padding:5px;	
+}
+
+.pop_up_fermer {
+float:right;
+}
+
+.pop_up_fermer a {
+color:#2088AC;
+}
+
+.pop_up_fermer a:hover {
+color:#2E5B6B;
+background-color:#E9F7FB;
+text-decoration:underline;
+}
+
+/*------------------------------------------------------------------------------ 
+Style pour les formulaires
+ ----------------------------------------------------------------------------- */
+.formulaire {
+width:600px;
+margin:0 auto;
+padding:14px;
+}
+
+#style_form {
+border:solid 2px #b7ddf2;
+background:#ebf4fb;
+}
+
+#style_form h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+#style_form #info_form {
+font-size:11px;
+color:#666666;
+margin-bottom:20px;
+border-bottom:solid 1px #b7ddf2;
+padding-bottom:10px;
+}
+
+#style_form label {
+display:block;
+font-weight:bold;
+text-align:right;
+width:220px;
+float:left;
+}
+
+#style_form .small {
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:220px;
+}
+
+#style_form input,#style_form select,#style_form textarea {
+float:left;
+font-size:12px;
+border:solid 1px #aacfe4;
+width:350px;
+margin:2px 0 20px 10px;
+padding:4px 2px;
+}
+
+#style_form .checkbox{
+width:0px;
+}
+
+#style_form .bouton {
+height:31px;
+width:100px;
+background:#666666;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:11px;
+font-weight:bold;
+float:none;
+}
+
+#style_form .bouton:hover{
+background-color:#969696;
+}
+/*------------------------------------------------------------------------------ 
+Style autres
+ ----------------------------------------------------------------------------- */
+#prev {
+clear:both;
+}
+
+.underline {
+padding-bottom:15px;
+border-bottom:1px solid black;
+font-size:20px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.contenu a img{
+border:5px solid black;
+}
+
+.paragraphe_centrer {
+text-align:center;
+}
+
+a {
+text-decoration:none;
+border:0;
+color:#0855C6;;
+}
+
+a img {
+border:0;
+}
+
+#menu_admin {
+margin:auto;
+}
+
+.menu_admin {
+float:left;
+text-align:center;
+border:1px solid #EFEFEF;
+padding-bottom:5px;
+padding-right:5px;
+padding-left:5px;
+margin-right:5px;
+margin-left:5px;
+margin-top:5px;
+}
+
+.menu_admin:hover {
+border-right:1px solid #CECFCE;
+border-bottom:1px solid #CECFCE;
+}
+
+.menu_admin a {
+color:#636563;
+}
+
+.menu_admin a:hover {
+color:#0855C6;
+}
+
+.tableau {
+border-collapse:collapse;
+margin:auto;
+}
+
+.tableau td {
+padding : 10px ;
+border-spacing:0;
+border:1px solid #666;
+empty-cells: show;
+background-color:#fafafa;
+text-align:center;
+width:auto;
+}
+
+.tableau caption {
+font-size:2em;
+padding:1em 0 0.5em 1em;
+}
+
+.tableau tr.impair td {
+background-color: #eee;
+}
+
+.tableau th {
+font-size:11px;
+color:#666666;
+text-align:center;
+padding : 10px ;
+}
+
+.spacer {
+clear:both;
+height:1px;
+}
+
+.fil_ariane{
+color:#666666;
+}
+.tableau_principal{
+margin:auto;
+}
+.tableau_principal .td_principal{
+width:50%;
+vertical-align:top;
+}
+.liste{
+background-image:url("../images/icones/bullet_black.png");
+background-repeat:no-repeat;
+padding-left:30px;
+}
+.texte_partenaire{
+margin-left:120px;
+}
+.vertical_align{
+vertical-align:middle;
+padding-bottom:3px;
+}

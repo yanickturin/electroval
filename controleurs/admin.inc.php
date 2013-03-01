@@ -1,0 +1,13 @@
+<?php
+include_once('modeles/admin.php');
+if(!connecte()){
+	header('Location:'.ADRESSE_SITE.'/connexion.html');
+}
+elseif(!isAdmin()){
+	header('Location:'.ADRESSE_SITE.'/connexion.html');
+}
+else{
+	ob_end_flush();
+	include_once('vues/admin.php');
+}
+?>
